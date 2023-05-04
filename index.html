@@ -12,13 +12,8 @@
       crossorigin="anonymous"
     />
     <style>
-      .nav-link {
-        margin: 0 1rem 0 1rem;
-      }
-
       body {
-        text-shadow: 0 0.05rem 0.1rem rgba(255, 230, 0, 0.5);
-        box-shadow: inset 0 0 5rem rgba(255, 251, 0, 0.5);
+        text-shadow: 0 0rem 0.5rem rgb(255, 230, 0);
       }
 
       .bg-image {
@@ -26,7 +21,19 @@
         background-repeat: no-repeat;
         width: 100%;
         background-size: cover;
-        min-height: 400px;
+        min-height: 50vh;
+        align-items: center;
+        display: flex;
+      }
+      #gradient {
+        width: 100%;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(
+          180deg,
+          rgba(131, 58, 180, 0) 0%,
+          rgba(0, 0, 0, 1) 40%,
+          rgba(252, 176, 69, 0) 100%
+        );
       }
     </style>
   </head>
@@ -65,22 +72,22 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
+              <li class="nav-item btn btn-sm">
                 <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item btn btn-sm">
                 <a class="nav-link" href="#">Menu</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item btn btn-sm">
                 <a class="nav-link" href="#">Events</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item btn btn-sm">
                 <a class="nav-link" href="#">Careers</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item btn btn-sm">
                 <a class="nav-link" href="#">Contact Us</a>
               </li>
-              <li id="book-table" class="nav-item border">
+              <li class="nav-item border btn btn-sm">
                 <a class="nav-link active" href="#">Book a Table</a>
               </li>
             </ul>
@@ -89,7 +96,26 @@
       </div>
     </nav>
 
-    <div class="top-container bg-image h-100"></div>
+    <div class="top-container bg-image mt-5 text-center py-5">
+      <div id="gradient">
+        <div class="container my-5">
+          <h1 class="text-white pt-4">Black Petal Bistro</h1>
+          <p class="col-lg-8 mx-auto fs-5 p-1 text-white">
+            Charming eatery nestled in the heart of Stockholm. With a cozy and
+            inviting atmosphere, this bistro is the perfect spot for a romantic
+            date night or a casual catch-up with friends. The
+            <a href="#">Menu</a> at Black Petal Bistro boasts a selection of
+            classic dishes with a modern twist, all made with fresh, locally
+            sourced ingredients.
+          </p>
+          <button
+            class="d-inline-flex align-items-center btn btn-outline-warning btn-lg px-4"
+          >
+            Book a Table
+          </button>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -98,3 +124,4 @@
     ></script>
   </body>
 </html>
+
